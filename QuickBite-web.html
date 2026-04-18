@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   <style>
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        h2{
+            margin-top: 10px;
+
+        }
+        p{
+            margin-top:10px;
+        }
+        button{
+           
+            background-color: rgb(13, 66, 48);
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: rgb(46, 91, 76);
+            cursor: pointer;
+
+        }
+        .web{
+            background-color: rgb(30, 76, 61);
+            color: white;
+           display: flex;
+           padding: 10px;
+           justify-content: space-between;
+           align-items: center;
+          
+
+        }
+        .web h1{
+            font-size: 50px;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 10px 15px; 
+        }
+        .navbar nav{
+            display: flex;
+            gap: 0px 20px;
+            /* gap can be only apply on parent tag  */
+        }
+        
+        .hero{
+            height: 200px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            background-color:rgba(158, 218, 198, 0.541);
+            align-items: center;
+            
+        }
+        .hero div{
+            font-size: 17px;
+            padding: 10px 0px;
+        }
+       
+        .hero img{
+            width: 100%;
+        }
+        .fd{
+            width: 40%;
+            padding: 10px;
+          
+        }
+        .fd button{
+            margin-top: 10px;
+        }
+
+        .food{
+            width: 20%;
+        }
+         .text{
+            color: rgb(32, 103, 79);
+            text-align: center;
+            font-size: 40px;
+         
+        
+
+            
+        }
+        .Services{
+            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+
+            
+        }
+        .Services div{
+            width: 23%;
+            font-size: 17px;
+            background-color:rgba(158, 218, 198, 0.541);
+            align-items: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 200px; 
+            border-radius: 20px;
+             box-shadow: 0px 7px 10px rgba(0, 0,0, 0.8); 
+             padding: 10px;
+            
+        }
+        
+        .choose{
+            background-color: rgba(158, 218, 198, 0.541) ;
+            padding: 10px;
+        }
+        .team{
+            height: 300px;
+            padding: 180px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+
+        }
+        .team div{
+             width: 30%;
+            font-size: 17px;
+            /* background-color:aquamarine; */
+            align-items: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 300px; 
+             
+           
+
+        }
+        .team img{
+            width: 100%;
+            height: 60%;
+            border-radius: 3000px;
+            box-shadow: 0px 7px 10px rgba(0, 0,0, 0.8);
+            
+        }
+        .team-card img{
+            width: 90%;
+        }
+        .team-card h1{
+            width: 10%;
+            margin-bottom: 0;
+        }
+        .team-card p{
+            width: 10%;
+            margin-top: 0;
+        }
+        
+        .menu{
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px;
+            flex-wrap: wrap;
+            align-content: center;
+            gap: 80px;
+        }
+        .menu div{
+             
+            background-color: rgba(185, 228, 214, 0.578);
+            align-items: center; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; 
+            align-content: center;
+            flex: 1 0 300px;
+            border-radius: 30px;
+            box-shadow: 0px 7px 10px rgba(0, 0,0, 0.8);
+            overflow: hidden;
+
+            /* box-shadow: horizontal vertical blur color; */
+            
+
+        }
+        .menu .item{
+            height: 330px;
+           
+        }
+        .menu img{
+            width: 100%;
+            height: 150px;
+        }
+        .menu button{
+            padding: 10px  15px;
+            background-color:  rgb(13, 66, 48) ;
+            color: white;
+            margin: 10px ;
+            border-radius: 15px;
+        }
+        .menu button:hover{
+            background-color: rgb(46, 91, 76);
+            cursor: pointer;
+
+        }
+        .menu h3{
+            color: rgb(13, 66, 48) ;
+        }
+        .menu p{
+            padding: 0px 10px;
+        }
+         .footer{
+            background-color: rgb(30, 76, 61);
+            color: white;
+          
+           padding: 10px;
+           text-align: center;
+           
+           
+
+        }
+        .footer nav{
+            margin: 20px;
+        }
+
+   </style>
+</head>
+<body>
+    <header>
+        <div class="web">
+        <h1>Quick Bite</h1>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+</div>
+    </header>
+    <section id="" class="hero">
+        <div class="fd">
+            <h2>Experience Fresh and Delicious Food</h2>
+            <p>Discover a wide variety of delicious meals prepared by top restaurants in your city. Our platform makes it easy to explore menus, place orders, and enjoy high-quality food delivered quickly and safely to your doorstep.</p>
+            <button type="button">Explore more</button>
+        </div>
+
+        <div class="food">
+         <img src="https://png.pngtree.com/png-clipart/20240129/original/pngtree-burger-delight-chicken-with-finger-fries-platter-on-the-background-png-image_14176633.png" alt="burgurs">
+        </div>
+    </section>
+    
+    <section id="Services" >
+           <h2 class="text">Our Services</h2>
+           <div class="Services">
+        <div>
+            <h3>Fast Delivery</h3>
+            <p>We ensure quick and reliable delivery so your food arrives hot and fresh within minutes.</p>
+            <button type="button">Order Now</button>
+        </div>
+        <div>
+            <h3>Fresh Ingredients</h3>
+            <p>All meals are prepared using high-quality ingredients to guarantee great taste.</p>
+            <button type="button">Open Menu</button>
+        </div>
+        <div>
+            <h3>Easy Online Ordering</h3>
+            <p>Our simple ordering system allows customers to browse menus and place orders effortlessly.</p>
+            <button type="button">Order </button>
+        </div>
+        <div>
+            <h3>24/7 Customer Support</h3>
+            <p>Our friendly support team is always available to help you with orders, queries, or any issues, ensuring a smooth and satisfying experience.</p>
+            <button type="button">Contact us </button>
+        </div>
+        </div>
+    </section>
+    <section id="Home">
+        <h2 class="text">Menu</h2>
+        <div class="menu">
+            <div class="item">
+                <img src="https://burgerrecipes.sfo3.digitaloceanspaces.com/wp-content/uploads/2025/07/04004720/Homemade-KFC-Zinger-Burger2-500x500.png" alt="burger">
+                <h3>Zinger Burger</h3>
+                <h3>Price: Rs. 550</h3>
+                <p>Crispy chicken zinger fillet served with fresh lettuce, creamy mayo, and a soft toasted bun.
+                  
+                </p>
+                <button >Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/039/651/892/small/ai-generated-chicken-shawarma-wrap-isolated-on-transparent-background-png.png" alt="shwarma">
+                <h3>Chicken Shawarma</h3>
+                <h3>Price: Rs. 350</h3>
+                <p>Juicy grilled chicken wrapped in soft pita bread with garlic sauce and fresh vegetables.</p>
+                 <button >Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHymx4Nht9zWLRRNyAHnoMDYk5Ei18hc8aVw&s" alt="">
+                <h3>Cheese Pizza</h3>
+                <h3>Price: Rs. 1200</h3>
+                <p>Classic pizza topped with rich tomato sauce and a generous layer of melted mozzarella cheese.</p>
+                 <button >Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="https://aviko-eu.s3.eu-west-2.amazonaws.com/united_kingdom/2024-04/how_to_make_loaded_fries_new_header.jpg" alt="">
+                <h3>Loaded Fries</h3>
+                <h3>Price: Rs. 450</h3>
+                <p>Golden crispy fries topped with cheese sauce, spicy mayo, and delicious seasoning.</p>
+                 <button >Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="https://www.allrecipes.com/thmb/HIyjZ8LIhyUgw-IngzlMxlhK2M8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/143587-grilled-chicken-salad-sandwich-VAT-001-4x3-45cc34263cc24596a69f8082d31afa5d.jpg" alt="">
+                <h3>Grilled Chicken Sandwich</h3>
+                <h3>Price: Rs. 480</h3>
+                <p>Tender grilled chicken breast with lettuce, tomato, and special house sauce in toasted.</p>
+                 <button >Add to Cart</button>
+            </div>
+             <div class="item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_UqbbQgfNMWWdx4d1CEnDwAUsVDxDLS52KA&s" alt="">
+                <h3>Chicken Biryani</h3>
+                <h3>Price: Rs. 400</h3>
+                <p>Traditional Pakistani basmati rice cooked with flavorful spices and tender chicken pieces.</p>
+                 <button >Add to Cart</button>
+            </div>
+             <div class="item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6h-PY8I3C5DciihcAsX80xkIVW7ili9nOg&s" alt="">
+                <h3>BBQ Chicken Wings</h3>
+                <h3>Price: Rs. 600</h3>
+                <p>Spicy and smoky chicken wings coated in a rich BBQ sauce.</p>
+                 <button >Add to Cart</button>
+            </div>
+             <div class="item">
+                <img src="https://img.freepik.com/free-photo/side-view-club-sandwich-grilled-chicken-with-cucumber-tomato-sauce-lettuce-milkshake-coffee-beans-table_141793-4864.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+                <h3>Club Sandwich</h3>
+                <h3>Price: Rs. 420</h3>
+                <p>Triple-layer sandwich filled with chicken, eggs, lettuce, and creamy mayonnaise.</p>
+                 <button >Add to Cart</button>
+            </div>
+             <div class="item">
+                <img src="https://www.vitamixuk.com/wp-content/uploads/2023/05/chocolatemilkshakemainjpg-2.jpg" alt="">
+                <h3>Chocolate Milkshake</h3>
+                <h3>Price: Rs. 320</h3>
+                <p>Cold and creamy chocolate milkshake topped with whipped cream and chocolate syrup.</p>
+                 <button >Add to Cart</button>
+            </div>
+            
+        </div>
+      </section>
+      <section>
+        <div class="choose">
+            <h2>Why choose Quick Bites?</h2>
+            <p>At Quick Bites, we bring delicious meals from the best local restaurants straight to your doorstep. Our platform ensures fast delivery, fresh ingredients, and a wide variety of options to satisfy every craving. With user-friendly ordering, reliable service, and affordable prices, Quick Bites makes eating well easy, convenient, and enjoyable for everyone.</p>
+        </div>
+      </section>
+   
+  
+    <section id="About">
+         <h2 class="text">Meet Our Team</h2>
+         <div class="team" >
+        <div class="team-card">
+            <img src="https://static.cordonbleu.edu/Files/MediaFile/84569.jpg" alt="">
+            <h3>Laraib</h3>
+            <p>Chef</p>
+        </div>
+        <div class="team-card">
+            <img src="https://sundancecollege.com/wp-content/uploads/2024/09/professional-business-manager-working-on-project-with-laptop.webp" alt="">
+            <h3>Arooj</h3>
+            <p>Manager</p>
+        </div>
+        <div class="team-card">
+            <img src="https://img.freepik.com/free-photo/food-delivery-man-with-boxes-with-food_1303-27723.jpg" alt="">
+            <h3>Ali</h3>
+            <p>Delivery</p>
+        </div>
+        </div>
+</section>
+      
+   <footer>
+    <div class="footer">
+        <h1>Quick Bite</h1>
+        <nav class="navbar">
+            <a href="Privacy Policy">Privacy Policy</a>
+            <a href="Terms">Terms</a>
+            <a href="Contact">Contact</a>
+            <a href="Services">Services</a>
+            
+        </nav>
+   </footer>
+         
+   
+</body>
+</html>

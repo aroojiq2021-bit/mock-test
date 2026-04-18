@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout using Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            /* defining / creating a var */
+            --btn-color: rgb(255, 225, 0);
+
+            /* variables for color */
+            --dark:    #0f1117;
+            --accent:  #e8a045;
+            --light:   #f5f0e8;
+            --mid:     #2a2d38;
+            --muted:   #8a8fa8;
+            --white:   #ffffff;
+            --purple: #6a22f0;
+
+        }
+        body{font-family: Arial, Helvetica, sans-serif;}
+
+        /* navbar */
+        .navbar{
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 20px 25px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .navbar .title{
+            font-family: Inter;
+        }
+
+        .navbar .north{color: var(--accent);}
+        .navbar nav{
+            display: flex;
+            gap: 0px 15px;
+        }
+        .navbar nav a{
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+
+        }
+        .nav-btn{
+            text-decoration: none;
+            background-color: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* main */
+        .hero{
+            background-color: var(--mid);
+            height: 220px;
+        }
+        .hero .title{
+            color: var(--muted);
+            font-size: 15px;
+            align-items: baseline;
+            padding-top: 20px ;
+            padding-left: 20px;
+            font-family: 'Inter', sans-serif;
+
+        }
+        .card{
+            background-color: #333745;
+            border-top: 2px solid var(--accent);
+            border-radius: 5px;
+            font-size: 12px;
+            padding: 15px;
+            
+            width: 25%;
+            height: 140px;
+            
+        }
+
+        .card p{
+            color: var(--muted);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .card h3{
+            color: var(--white);
+            margin-top: 15px;
+           font-family: Inter;
+        }
+        .emoji{
+            font-size: 20px;
+        }
+        .card-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            padding-top: 10px;
+            gap: 10px;
+        }
+        .story{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .story .text{
+            width: 50%;
+            padding: 10px;
+            
+
+        }
+        .text .ourstory{
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+        }
+        .text p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .text .para{
+            color: var(--mid)
+        }
+        .text h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            font-size:  35px;
+            
+        }
+        .story img{
+            width: 100%;
+             border-radius: 20px;
+        }
+        .story .image{
+            width: 40%;
+           
+        }
+        .text button{
+            padding: 10px 15px;
+            background-color: var(--dark);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .prefoot{
+            background-color: #e8a045;
+            color: #0f1117;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .prefoot .stat h2{
+            font-family: Inter;
+
+        }
+        .prefoot .stat p{
+            font-size: 10px;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: #333745;
+        }
+        .foot{
+             background-color: var(--dark);
+            color: var(--white);
+            padding: 20px 25px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            font-family: Inter;
+        }
+         .foot .n{color: var(--accent);}
+         .foot nav a{
+            color: var(--white);
+            text-decoration: none;
+           padding: 10px;
+            font-size: 11px;
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- title -->
+            <h2 class="title">Trek<span class="north">North</span></h2>
+            <!-- nav menu -->
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+            </nav>
+            <!-- nav button -->
+            <a href="#" class="nav-btn">Book a trip</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="title">Why choose us</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="emoji">⛰️</div>
+                    <h3>Expert Guides</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="card">
+                    <div class="emoji">🗺️</div>
+                    <h3>Custom Routes</h3>
+                    <p>Every trip is tailored to your skill level and interests — no two journeys are the same.</p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji"> &#9978;</div>
+                    <h3>Premium Gear</h3>
+                    <p>Top-of-the-line equipment provided so you can focus entirely on the adventure ahead.</p>
+                </div>
+
+                <div class="card">
+                    <div class="emoji">📡</div>
+                    <h3>24/7 Support</h3>
+                    <p>Satellite communication and emergency support throughout every stage of your journey.</p>
+                </div>
+
+            </div>
+
+       </section>
+
+           
+        <section class="story">
+            <div class="text">
+                <p class="ourstory">OUR STORY</p>
+                <h1>Adventure Begins Where the Road Ends</h1>
+                <p class="para">We believe the most tranformative experiences happen beyond the beaten path. TrekNorth has been connecting people with the wilderness since 2010-from the frozen peaks of Scandinavia to the sweeping savannas of East Africa.</p>
+                <button type="button">Discover More</button>
+            </div>
+            <div class="image">
+                <img src="img/images.jpg" alt="">
+
+            </div>
+
+
+        </section>
+        <section class="prefoot">
+            <div class="stat">
+                <h2>120+</h2>
+                <p>DESTINATIONS</p>
+            </div>
+
+            <div class="stat">
+                <h2>8,400</h2>
+                <p>HAPPY TRAVELLERS</p>
+            </div>
+
+           <div class="stat">
+                <h2>14</h2>
+                <p>YEARS ACTIVE</p>
+            </div>
+
+            <div class="stat">
+                <h2>98%</h2>
+                <p>SATISFACTION RATE</p>
+            </div>
+
+         </section>
+         </main>
+
+         <footer >
+        
+        <section class="foot">
+        
+            <h2 class="footer-logo">Trek<span class="n">North</span></h2> 
+               <p>© 2025 TrekNorth. All rights reserved.</p>
+
+              <nav >
+                  <a href="#">Privacy</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Contact</a>
+              </nav>
+         
+        
+        </section>
+        </footer>
+    
+</body>
+</html>
